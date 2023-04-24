@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+:root {
+    --cor-verde: #49a09d;
+    --cor-lilás: #5f2c82;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html , body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor-lilás);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+section#login {
+    position: absolute;
+    background-color: white;
+    width: 250px;
+    height: 515px;
+    border-radius: 20px;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    transition: width .3s , height .3s;
+    transition-timing-function: ease;
+}
+
+section#login > div#imagem {
+    display: block;
+    background: url(../imagens/metal.jpg) no-repeat;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: left bottom;
+}
+
+section#login > div#formulario {
+    display: block;
+    font-size: .8em;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+div#formulario h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 8px;
+}
+
+form > div.campo {
+    background-color: var(--cor-lilás);
+    height: 40px;
+    margin: 8px 0px;
+    border-radius: 8px;
+}
+
+div.campo > label {
+    display: none;
+}
+
+div.campo > span {
+    height: 100%;
+    font-size: 2em;
+    padding: 5px;
+    color: white;
+}
+
+div.campo > input {
+    height: 90%;
+    width: calc(100% - 40px);
+    border-radius: 8px;
+    border: none;
+    transform: translateY(-5.5px);
+}
+
+input[type='submit'] {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--cor-verde);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type='submit']:hover {
+    background-color: #337371;
+}
+
+a.botao {
+    display: block;
+    height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #49a09d;
+    font-size: 1.5em;
+    border: 1px solid #337371;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+a.botao:hover {
+    background-color: #a8e1df;
+    color: #2b615f;
+}
